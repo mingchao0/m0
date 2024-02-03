@@ -7,20 +7,64 @@ const fs = require('fs');
 const { exit } = require('process');
 const readline = require('readline');
 
+//-----------------------------------------------------------------------------
+// 0. global variables and helper functions
+let globalIdxFile = process.argv[2]
+let freqs =  {} // map token to an array of (link, freq) pairs
+function getType(variable) {
+  return Object.prototype.toString.call(variable).slice(8, -1);
+}
+
+// 1: process the globalIdxFile
+let text = fs.readFileSync(globalIdxFile, 'utf-8')
+for (const line of text.split('\n')) {
+  if (!line) {
+    continue
+  }
+  let [term, rest] = line.split(' | ')
+  if (!freqs[term]) {
+    freqs[term] = [];
+  }
+  let restWords = rest.split(' ')
+  for (let i = 0; i < restWords.length; i += 2) {
+    let url = restWords[i]
+    let count = restWords[i + 1]
+    freqs[term].push({ "url": url, "count": count })
+  }
+}
+
+//-----------------------------------------------------------------------------
+
 const rl = readline.createInterface({
   input: process.stdin,
 });
 
-// TODO some code here
 rl.on('line', (line) => {
-  // TODO some code here
+  let [term, count, url] = line.split('|').map((part) => part.trim())
+  if (!freqs[term]) {
+    freqs[term] = []
+  }
+  freqs[term].push({ "url": url, "count": count })
 });
 
 rl.on('close', () => {
-  mergeIndices();
+  const serializedContent = serializeFreqs(freqs);
+  console.log(serializedContent)
+  // fs.writeFileSync(globalIdxFile, serializedContent, 'utf-8');
 });
 
-const mergeIndices = () => {
-  // TODO some code here
-}
+// Serialize freqs to the desired format
+const serializeFreqs = (freqs) => {
+  let result = ""
+  for (const token in freqs) {
+    result += `${token} |`
+    for (let i = 0; i < freqs[token].length; i++) {
+      let obj = freqs[token][i]
+      result += ` ${obj["url"]} ${obj["count"]}`
+    }
 
+    result += '\n'
+  }
+
+  return result.slice(0, -1);
+};

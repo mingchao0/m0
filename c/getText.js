@@ -9,12 +9,31 @@ const rl = readline.createInterface({
   input: process.stdin,
 });
 
-// TODO Add some code
+let fullHtml = '';
 
 rl.on('line', (line) => {
-  // TODO Add some code
+  // Accumulate the full HTML content from each line
+  fullHtml += line + '\n';
 });
 
 rl.on('close', () => {
-  // TODO Add some code
+  // Convert the accumulated HTML to text using html-to-text
+  const textContent = convert(fullHtml, {
+    wordwrap: false,
+    format: {
+      heading: function (node, fn, options) {
+        const hLevel = node.depth;
+        const hText = fn(node.children, options);
+        return '\n' + hText.toUpperCase() + '\n\n';
+      },
+      anchor: function (node, fn, options) {
+        const href = options.linkHref(node);
+        const text = fn(node.children, options);
+        return text + ' [' + href + ']';
+      },
+    },
+  });
+
+  // Print the extracted text
+  console.log(textContent);
 });

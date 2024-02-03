@@ -3,4 +3,5 @@
 # line, convert it to lowercase ascii, and remove any stopwords 
 # useful commands: tr, iconv, grep
 
-tr -cs A-Za-z '\n' | cat # TODO replace `cat` more code...
+stopwords_file="d/stopwords.txt"
+tr -cs A-Za-z '\n' | tr A-Z a-z | grep -vwF -f "$stopwords_file"
