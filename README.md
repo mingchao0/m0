@@ -12,13 +12,13 @@ My implementation comprises `8` software components, totaling `254` lines of cod
 
 1. Need to guess the requirements with limited guidance. The functionality description of each file has only one sentence or two. Not sure what the requirements are, I inspected the test files and what the expected outputs are for every one of them. I also reviewed the architecture diagram each time after finishing a component to make sure I could connect different pieces together.
 2. Unfamiliarity with shell scripts. The bash scripts were very challenging to me. Not only because I had not learned script coding before, but also shell scripts were very hard to read, and the syntax was not intuitve. To overcome this, I broken down a task into many smaller pieces, each with a comment. Then I used various resources online to work on one piece at a time.
-3. The debugging process is hard, because there are too many components in the system.
+3. The debugging process is hard, because there are too many components in the system, and the expected output format is not clear.
 
 ## Correctness & Performance Characterization
 
 > Describe how you characterized the correctness and performance of your implementation
 
-_Correctness_: My implementation passes `<number>` out of the `<number>` tests (`<percentage>`%) already provided for M0. I developed another `<number>` tests, which focus on `<..details>`. All these tests, combined take `<time>` to complete. `<additional approaches for increasing correctness confidence>`.
+_Correctness_: My implementation passes `9` out of the `10` tests (`90`%) already provided for M0. I developed another `6` tests, which is similar to the given tests and tests different components of the search engine for [sandbox 2](https://cs.brown.edu/courses/csci1380/sandbox/2/). All these tests, combined take `2 hrs`to complete.
 
 _Performance_: Evaluating the entire system using the `time` command on the three sandboxes reports the following times:
 
