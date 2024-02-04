@@ -55,7 +55,7 @@ rl.on('close', () => {
 // Serialize freqs to the desired format
 const serializeFreqs = (freqs) => {
   let result = '';
-  for (const token in freqs) {
+  for (const token of Object.keys(freqs)) {
     result += `${token} |`;
     for (let i = 0; i < freqs[token].length; i++) {
       let obj = freqs[token][i];
