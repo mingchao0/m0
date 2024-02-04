@@ -18,15 +18,15 @@ My implementation comprises `8` software components, totaling `254` lines of cod
 
 > Describe how you characterized the correctness and performance of your implementation
 
-_Correctness_: My implementation passes `9` out of the `10` tests (`90`%) already provided for M0. I developed another `6` tests, which is similar to the given tests and tests different components of the search engine for [sandbox 2](https://cs.brown.edu/courses/csci1380/sandbox/2/). All these tests, combined take `2 hrs`to complete.
+_Correctness_: My implementation passes `10` out of the `10` tests (`100`%) already provided for M0. I developed another `7` tests, which is similar to the given tests and tests different components of the search engine for [sandbox 2](https://cs.brown.edu/courses/csci1380/sandbox/2/). All these tests, combined take `3 hrs`to complete.
 
 _Performance_: Evaluating the entire system using the `time` command on the three sandboxes reports the following times:
 
-|           | Engine   | Query    |
-| --------- | -------- | -------- |
-| Sandbox 1 | 8.633s   | 0.023s   |
-| Sandbox 2 | 5m8.178s | 0.182s   |
-| Sandbox 3 | `<time>` | `<time>` |
+|           | Engine   | Query  |
+| --------- | -------- | ------ |
+| Sandbox 1 | 8.633s   | 0.023s |
+| Sandbox 2 | 5m8.178s | 0.182s |
+| Sandbox 3 | INF      | N/A    |
 
 ## Time to Complete
 
