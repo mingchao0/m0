@@ -4,5 +4,8 @@
 # along  with appropriate stemming of the input strings and stripping of the 
 # index metadata
 
-echo "$@" | cat
+term=$1
+index_file="d/global-index.txt"
 
+result=$(grep -i -o ".*$term.*" "$index_file")
+echo "$result"
