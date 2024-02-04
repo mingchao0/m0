@@ -23,7 +23,7 @@ rl.on('close', () => {
     format: {
       heading: function(node, fn, options) {
         const hText = fn(node.children, options);
-        return  hText.toUpperCase();
+        return hText.toUpperCase();
       },
       anchor: function(node, fn, options) {
         const href = options.linkHref(node);
