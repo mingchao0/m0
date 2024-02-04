@@ -4,4 +4,4 @@
 # useful commands: tr, iconv, grep
 
 stopwords_file="d/stopwords.txt"
-tr -cs A-Za-z '\n' | tr A-Z a-z | grep -vwF -f "$stopwords_file"
+tr -cs A-Za-z '\n' | tr '[:upper:]' '[:lower:]' | grep -vwF -f "$stopwords_file"

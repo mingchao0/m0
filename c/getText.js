@@ -2,7 +2,7 @@
 
 // Extract text from a web page
 
-const { convert } = require('html-to-text');
+const {convert} = require('html-to-text');
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -21,12 +21,11 @@ rl.on('close', () => {
   const textContent = convert(fullHtml, {
     wordwrap: false,
     format: {
-      heading: function (node, fn, options) {
-        const hLevel = node.depth;
+      heading: function(node, fn, options) {
         const hText = fn(node.children, options);
         return '\n' + hText.toUpperCase() + '\n\n';
       },
-      anchor: function (node, fn, options) {
+      anchor: function(node, fn, options) {
         const href = options.linkHref(node);
         const text = fn(node.children, options);
         return text + ' [' + href + ']';

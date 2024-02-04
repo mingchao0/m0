@@ -8,10 +8,7 @@ url=$1
 declare -A freqs
 # Read input from stdin
 while IFS= read -r line; do
-    # Replace tabs with spaces in the line
-    line=$(echo "$line")
-    # line=$(echo "$line" | tr '\t' ' ')
-    if [ -v freqs["$line"] ]; then
+    if [[ -v freqs["$line"] ]]; then
         freqs["$line"]=$((freqs["$line"] + 1))
     else
         freqs["$line"]=1

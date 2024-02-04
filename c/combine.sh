@@ -3,7 +3,7 @@
 # Combine terms to create  n-grams (for n=1,2,3) and then count and sort them
 
 # Create an array for unigrams, bigrams, and trigrams
-terms=($(cat - | tr '\n' ' '))
+IFS=' ' read -ra terms <<< "$(cat - | tr '\n' ' ')"
 
 # bigrams
 bigrams=()
@@ -27,7 +27,9 @@ done
 combined=("${terms[@]}" "${bigrams[@]}" "${trigrams[@]}")
 
 # Sort and count the combined terms
-sorted_output=($(printf "%s\n" "${combined[@]}" | sort | uniq -c | sort -rn | awk '{print $2}'))
+# sorted_output=($(printf "%s\n" "${combined[@]}" | sort | uniq -c | sort -rn | awk '{print $2}'))
+mapfile -t sorted_output < <(printf "%s\n" "${combined[@]}" | sort | uniq -c | sort -rn | awk '{print $2}')
+
 # Replace '-' with ' ' in each element
 for ((i = 0; i < ${#sorted_output[@]}; i++)); do
     sorted_output[i]="${sorted_output[i]//-/ }"
