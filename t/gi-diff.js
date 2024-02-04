@@ -15,7 +15,7 @@ function _0x2729(_0x40ddce, _0x31b615) {
 (function(_0x5f1b91, _0x19f50c) {
   const _0x2352e4 = _0x2729;
   const _0x45ad1e = _0x5f1b91();
-  while (!![]) {
+  while ([]) {
     try {
       const _0x30656a =
         -parseInt(_0x2352e4(0x18f)) / 0x1 +
