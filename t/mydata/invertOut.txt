@@ -1,0 +1,48 @@
+adventur | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+adventur book | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+adventur book book | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+book | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+book book | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+book book book | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+book book collect | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+book collect | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+book collect dorian | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+collect | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+collect dorian | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+collect dorian grai | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+dorian | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+dorian grai | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+dorian grai holm | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+grai | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+grai holm | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+grai holm homer | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+holm | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+holm homer | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+holm homer iliad | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+homer | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+homer iliad | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+homer iliad oscar | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+iliad | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+iliad oscar | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+iliad oscar pictur | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+oscar | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+oscar pictur | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+oscar pictur sherlock | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+pictur | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+pictur sherlock | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+pictur sherlock static | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+sherlock | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+sherlock static | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+sherlock static static | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+static | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+static static | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+static static static | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+static static txt | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+static txt | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+static txt txt | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+txt | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+txt txt | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+txt txt txt | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+txt txt wild | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+txt wild | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html
+wild | 1 | https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html

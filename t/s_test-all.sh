@@ -7,3 +7,4 @@ cd "$(dirname "$0")" || exit
 ./s_test_process.sh
 ./s_test_stem.sh
 ./s_test_combine.sh
+./s_test_invert.sh
