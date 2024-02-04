@@ -27,8 +27,8 @@ done
 combined=("${terms[@]}" "${bigrams[@]}" "${trigrams[@]}")
 
 # Sort and count the combined terms
-# sorted_output=($(printf "%s\n" "${combined[@]}" | sort | uniq -c | sort -rn | awk '{print $2}'))
-mapfile -t sorted_output < <(printf "%s\n" "${combined[@]}" | sort | uniq -c | sort -rn | awk '{print $2}')
+# mapfile -t sorted_output < <(printf "%s\n" "${combined[@]}" | sort | uniq -c | sort -rn | awk '{print $2}')
+mapfile -t sorted_output < <(printf "%s\n" "${combined[@]}" | sort)
 
 # Replace '-' with ' ' in each element
 for ((i = 0; i < ${#sorted_output[@]}; i++)); do

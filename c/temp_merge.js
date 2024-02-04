@@ -60,14 +60,8 @@ rl.on('close', () => {
 const serializeFreqs = (freqs) => {
   let result = '';
   for (const token of Object.keys(freqs)) {
-    // Sort URLs based on counts in decreasing order
-    const sortedUrls = Object.keys(
-        freqs[token]).sort((a, b) => freqs[token][b] - freqs[token][a]);
-
     result += `${token} |`;
-
-    // Append sorted (url, count) pairs
-    for (const url of sortedUrls) {
+    for (const url of Object.keys(freqs[token])) {
       result += ` ${url} ${freqs[token][url]}`;
     }
 
