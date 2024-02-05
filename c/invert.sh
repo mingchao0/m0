@@ -5,8 +5,10 @@
 # Read the URL from the command line argument
 url=$1
 
+# freqs will maps terms to frequencies
 declare -A freqs
-# Read input from stdin
+
+# read input from stdin
 while IFS= read -r line; do
     if [[ -v freqs["$line"] ]]; then
         freqs["$line"]=$((freqs["$line"] + 1))
@@ -15,9 +17,10 @@ while IFS= read -r line; do
     fi
 done
 
-# Put all keys into an array
+# put all keys into an array
 keys=("${!freqs[@]}")
 
+# output to stdout following the test format
 mapfile -t sorted_keys < <(printf "%s\n" "${keys[@]}" | sort)
 for key in "${sorted_keys[@]}"; do
     echo "$key | ${freqs[$key]} | $url"

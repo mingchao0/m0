@@ -10,9 +10,6 @@ const readline = require('readline');
 // 0. global variables and helper functions
 let globalIdxFile = process.argv[2];
 let freqs = {}; // map token to an array of (link, freq) pairs
-// function getType(variable) {
-//   return Object.prototype.toString.call(variable).slice(8, -1);
-// }
 
 // 1: process the globalIdxFile
 let text = fs.readFileSync(globalIdxFile, 'utf-8');
@@ -53,20 +50,19 @@ rl.on('line', (line) => {
 rl.on('close', () => {
   const serializedContent = serializeFreqs(freqs);
   console.log(serializedContent);
-  // fs.writeFileSync(globalIdxFile, serializedContent, 'utf-8');
 });
 
-// Serialize freqs to the desired format
+// serialize freqs to the desired format
 const serializeFreqs = (freqs) => {
   let result = '';
   for (const token of Object.keys(freqs)) {
-    // Sort URLs based on counts in decreasing order
+    // sort URLs based on counts in decreasing order
     const sortedUrls = Object.keys(
         freqs[token]).sort((a, b) => freqs[token][b] - freqs[token][a]);
 
     result += `${token} |`;
 
-    // Append sorted (url, count) pairs
+    // append sorted (url, count) pairs
     for (const url of sortedUrls) {
       result += ` ${url} ${freqs[token][url]}`;
     }

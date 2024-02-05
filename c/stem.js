@@ -12,12 +12,10 @@ var rl = readline.createInterface({
 });
 
 rl.on('line', function(line) {
-  // Tokenize the line into words
+  // split the line into words
   var words = line.split(/\s+/);
-
-  // Stem each word using Porter Stemmer
+  // use the Porter Stemmer library
   var stemmedWords = words.map((word) => natural.PorterStemmer.stem(word));
-
-  // Output the stemmed words
+  // output the stemmed words to stdout
   console.log(stemmedWords.join(' '));
 });

@@ -9,16 +9,17 @@ const rl = readline.createInterface({
   input: process.stdin,
 });
 
-let fullHtml = '';
+let allHtml = '';
 
 rl.on('line', (line) => {
-  // Accumulate the full HTML content from each line
-  fullHtml += line + '\n';
+  // get all html from the input
+  allHtml += line + '\n';
 });
 
 rl.on('close', () => {
-  // Convert the accumulated HTML to text using html-to-text
-  const textContent = convert(fullHtml, {
+  // convert the accumulated HTML to text
+  // heading and anchor elements should have different formats
+  const textContent = convert(allHtml, {
     wordwrap: false,
     format: {
       heading: function(node, fn, options) {
@@ -33,6 +34,6 @@ rl.on('close', () => {
     },
   });
 
-  // Print the extracted text
+  // print to stdout for the next component of the engine
   console.log(textContent);
 });
